@@ -250,4 +250,26 @@ a:hover {
     border-radius: 30px;
 }
 
+.wrap-proj {
+    margin: 35px 60px;
+    display: flex;
+    align-items: center;
+}
+
+.other-project {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #E2FF32;
+    margin-right: 10px;
+}
+
+.proj-arrow {
+    width: 78px;
+    height: 40px;
+    background: url('./assets/arrow-right.svg') no-repeat center;
+}
+
 
