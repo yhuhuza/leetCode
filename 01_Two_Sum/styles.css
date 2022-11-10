@@ -273,4 +273,16 @@ a:hover {
     background: url('./assets/arrow-right.svg') no-repeat center;
 }
 
+pre {
+    color: black;
+    font-size: 16px;
+    background: white;
+    margin: 30px;
+    max-height: 500px;
+    overflow: scroll;
+    border-radius: 30px;
+    line-height: 15px;
+}
+
+
 

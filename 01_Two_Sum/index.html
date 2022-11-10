@@ -21,15 +21,34 @@
         </div>
     </div>
     <div class="wrapper-task">
-        <div class="task-info"><a href="https://leetcode.com/problems/two-sum/">Two sum</a></div>
+        <div class="task-info"><a href="https://leetcode.com/problems/two-sum/" target="_blank">Two sum</a></div>
         <div class="task-desc">
             Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
             You may assume that each input would have exactly one solution, and you may not use the same element twice.
+            You may assume that each input would have exactly one solution, and you may not use the same element twice.
+            You can return the answer in any order.
         </div>
     </div>
-    <div class="code-space"></div>
+    <pre><code>
+        var twoSum = function(nums, target) {<br>
+            const arrLen = nums.length;<br>
+            let mass = [];<br>
+            for (let i=0; i <= arrLen; i++) {<br>
+                const number = nums[i];<br>
+                for (let q=0; q <= arrLen; q++) {<br>
+                    const num = nums[q];<br>
+                    if (i === q) continue;<br>
+                    if ((number + num) === target && mass.length < 2) {<br>
+                        mass.push(i);<br>
+                        mass.push(q);<br>
+                    }<br>
+                }<br>
+            }<br>
+            return  mass;<br>
+        };<br>
+    </code></pre>
     <div class="wrap-proj">
-        <a class="other-project" href="https://leetcode.com/problemset/all/" target="_blank">Other projects</a>
+        <a class="other-project" href="https://github.com/yhuhuza" target="_blank">Other projects</a>
         <div class="proj-arrow"></div>
     </div>
 </body>
