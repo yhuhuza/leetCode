@@ -27,7 +27,10 @@
         </div>
     </div>
     <pre><code>
-
+        var isPalindrome = function(x) {<br>
+            if (x < 0) return false;<br>
+            return x.toString() === x.toString().split("").reverse().join("");<br>
+        }
     </code></pre>
     <div class="wrap-proj">
         <a class="other-project" href="https://github.com/yhuhuza" target="_blank">Other projects</a>
