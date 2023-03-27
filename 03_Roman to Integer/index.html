@@ -28,7 +28,29 @@
         </div>
     </div>
     <pre><code>
+        var romanToInt = function(s) {
+            if (!s) return null;
+            const romanIntegers = {
+                'I': '1', 'IV': '4',
+                'V': '5', 'IX': '9',
+                'X': '10', 'XL': '40',
+                'L': '50', 'XC': '90',
+                'C': '100', 'CD': '400',
+                'D': '500',  'CM': '900',
+                'M': '1000'
+            };
 
+        let number = 0;
+        const splittedArr = s.split(/(IV|IX|XL|XC|CD|CM|I|V|X|L|C|D|M)/);
+        const objKeys = Object.keys(romanIntegers);
+        for (let i = 0; i < splittedArr.length; i++) {
+            if (objKeys.includes(splittedArr[i])) {
+                number += +romanIntegers[splittedArr[i]];
+            }
+        }
+
+        return number;
+    };
     </code></pre>
     <div class="wrap-proj">
         <a class="other-project" href="https://github.com/yhuhuza" target="_blank">Other projects</a>
