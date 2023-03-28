@@ -30,7 +30,37 @@
         </div>
     </div>
     <pre><code>
+        var longestCommonPrefix = function(strs) {
+            if (!strs.length) return '';
 
+            let prefixWord = '';
+            const firstWord = strs[0];
+            const optionsArray = [];
+            const resultArray = [];
+            let firstLetter = firstWord[0];
+            optionsArray.push(firstLetter);
+
+            for (let q=0; q < firstWord.length; q++) {
+                if (firstWord[q+1]) {
+                    firstLetter = firstLetter + firstWord[q+1];
+                    optionsArray.push(firstLetter);
+                }
+            }
+
+            prefixWord = '';
+
+            for (let j=0; j<optionsArray.length; j++) {
+                const checkEvery = strs.every((item) => {
+                    return item.includes(optionsArray[j]) &&
+                    (item.indexOf(optionsArray[j]) === strs[0].indexOf(optionsArray[j]))
+                });
+                if (checkEvery) {
+                    prefixWord = optionsArray[j];
+                }
+            }
+
+            return prefixWord;
+        };
     </code></pre>
     <div class="wrap-proj">
         <a class="other-project" href="https://github.com/yhuhuza" target="_blank">Other projects</a>
