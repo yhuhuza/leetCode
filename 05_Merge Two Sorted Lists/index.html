@@ -23,44 +23,12 @@
     <div class="wrapper-task">
         <div class="task-info"><a href="hhttps://leetcode.com/problems/longest-common-prefix/" target="_blank">Longest Common Prefix</a></div>
         <div class="task-desc">
-            Write a function to find the longest common prefix string amongst an array of strings.
-            If there is no common prefix, return an empty string "".<br>
-            Example: Input: strs = ["flower","flow","flight"]
-            Output: "fl"
+            You are given the heads of two sorted linked lists list1 and list2.
+            Merge the two lists in a one sorted list. The list should be made by splicing together the nodes of the first two lists.
+            Return the head of the merged linked list.
         </div>
     </div>
     <pre><code>
-        var longestCommonPrefix = function(strs) {
-            if (!strs.length) return '';
-
-            let prefixWord = '';
-            const firstWord = strs[0];
-            const optionsArray = [];
-            const resultArray = [];
-            let firstLetter = firstWord[0];
-            optionsArray.push(firstLetter);
-
-            for (let q=0; q < firstWord.length; q++) {
-                if (firstWord[q+1]) {
-                    firstLetter = firstLetter + firstWord[q+1];
-                    optionsArray.push(firstLetter);
-                }
-            }
-
-            prefixWord = '';
-
-            for (let j=0; j<optionsArray.length; j++) {
-                const checkEvery = strs.every((item) => {
-                    return item.includes(optionsArray[j]) &&
-                    (item.indexOf(optionsArray[j]) === strs[0].indexOf(optionsArray[j]))
-                });
-                if (checkEvery) {
-                    prefixWord = optionsArray[j];
-                }
-            }
-
-            return prefixWord;
-        };
     </code></pre>
     <div class="wrap-proj">
         <a class="other-project" href="https://github.com/yhuhuza" target="_blank">Other projects</a>
